@@ -38,6 +38,7 @@ create_wordcloud<-function(data, num_words = 100, background = "white",language=
 
 #===============================================UI========================================================================
 ui <- fluidPage(
+  tags$head(includeHTML("wordcloud-analytics.html")),
   titlePanel("Word cloud creator"),
   h5("By Fernando Rodriguez"),
   theme = shinytheme('paper'),
@@ -78,7 +79,10 @@ ui <- fluidPage(
                h5("Fourth (suggested)"), h6("Write the words you will not like to see"),
                h5("Sixth (optional)"), h6("Select a background color from the palette"),
                h5("Seventh (optional)"),h6("Select a color theme for the words"),
-               h5("Eighth (optional)"),h6("Select the shape of the cloud"))
+               h5("Eighth (optional)"),h6("Select the shape of the cloud")),
+      tabPanel("About & report issues", h5(tags$a(href="https://www.linkedin.com/in/fernandojru/", "Author LinkedIn")),
+               h5(tags$a(href="https://github.com/fernandojru/Wordcloud-generator", "Github: Code & alternative ways to run")),
+               h5(tags$a(href="https://github.com/fernandojru/Wordcloud-generator/issues", "Report an issue")))
     )
     )
   )
