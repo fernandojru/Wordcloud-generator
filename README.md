@@ -1,6 +1,8 @@
 # Wordcloud generator
 This is an user-friendly web application to generate word clouds. **It was created with R Shiny**
 
+![Ex](/wordcloud-generator/UI.png)
+
 ## Access the tool: 
 
 It can be accessed with the following options
